@@ -1,0 +1,117 @@
+body {
+  background-image: linear-gradient(
+    111.4deg,
+    rgba(7, 7, 9, 1) 6.5%,
+    rgba(27, 24, 113, 1) 93.2%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.search {
+  height: 47px;
+  max-width: 500px;
+  margin: 0px auto;
+  input {
+    width: 400px;
+    outline: none;
+    border: 1px solid #8c8585;
+    height: 47px;
+    border-radius: 5px 0px 0px 5px;
+    font-weight: 700;
+    font-size: 20px;
+    color: transparent;
+    background-image: radial-gradient(
+      circle 897px at 9% 80.3%,
+      rgba(55, 60, 245, 1) 0%,
+      rgba(234, 161, 15, 0.9) 100.2%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  button {
+    border-radius: 0px 5px 5px 0px !important;
+    height: 47px;
+    width: 100px !important;
+  }
+}
+.card {
+  transition: all 0.6s ease-in-out;
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: #212529 !important;
+    text-decoration: none;
+  }
+  :hover {
+    transform: scale(1.05);
+  }
+}
+// Animation on heading when result found
+.focus-in-contract-bck {
+  color: transparent;
+  background-image: radial-gradient(
+    circle 897px at 9% 80.3%,
+    rgba(55, 60, 245, 1) 0%,
+    rgba(234, 161, 15, 0.9) 100.2%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-animation: focus-in-contract-bck 1s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+    transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(12px);
+    transform: translateZ(12px);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+    transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(12px);
+    transform: translateZ(12px);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+// search section responsiveness
+@media (max-width: 547px) {
+  .search {
+    gap: 10px;
+    height: auto;
+    padding-bottom: 10px;
+
+    input {
+      width: 100%;
+      border-radius: 5px;
+    }
+    button {
+      display: block;
+      width: 100% !important;
+      border-radius: 5px !important;
+    }
+  }
+}

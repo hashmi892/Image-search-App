@@ -1,0 +1,81 @@
+body {
+  background-image: linear-gradient(111.4deg, rgb(7, 7, 9) 6.5%, rgb(27, 24, 113) 93.2%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.search {
+  height: 47px;
+  max-width: 500px;
+  margin: 0px auto;
+}
+.search input {
+  width: 400px;
+  outline: none;
+  border: 1px solid #8c8585;
+  height: 47px;
+  border-radius: 5px 0px 0px 5px;
+  font-weight: 700;
+  font-size: 20px;
+  color: transparent;
+  background-image: radial-gradient(circle 897px at 9% 80.3%, rgb(55, 60, 245) 0%, rgba(234, 161, 15, 0.9) 100.2%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.search button {
+  border-radius: 0px 5px 5px 0px !important;
+  height: 47px;
+  width: 100px !important;
+}
+
+.card {
+  transition: all 0.6s ease-in-out;
+}
+.card a:link,
+.card a:visited,
+.card a:hover,
+.card a:active {
+  color: #212529 !important;
+  text-decoration: none;
+}
+.card :hover {
+  transform: scale(1.05);
+}
+
+.focus-in-contract-bck {
+  color: transparent;
+  background-image: radial-gradient(circle 897px at 9% 80.3%, rgb(55, 60, 245) 0%, rgba(234, 161, 15, 0.9) 100.2%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(12px);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 547px) {
+  .search {
+    gap: 10px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .search input {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .search button {
+    display: block;
+    width: 100% !important;
+    border-radius: 5px !important;
+  }
+}/*# sourceMappingURL=main.css.map */
